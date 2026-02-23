@@ -1,0 +1,10 @@
+def fibonacci_generator(n):
+    a, b = 0, 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+
+n = int(input())
+
+fib_numbers = list(fibonacci_generator(n))
+print(','.join(map(str, fib_numbers)))
